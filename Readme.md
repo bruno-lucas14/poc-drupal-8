@@ -48,8 +48,8 @@ emulsify system install --repository https://github.com/emulsify-ds/compound.git
 ```#bin/bash
 npm install
 ```
-- Create a folder called src and add a file called `tailwind.pcss` inside with the following information
-`
+- Create a folder called `src` and add a file called `tailwind.pcss` inside with the following information
+```scss
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,9 +76,9 @@ npm install
     @apply list-disc list-inside
   }
 }
-`
+```
 - Create in the theme folder a file called `tailwind.config.js` and add following information inside
-`
+```javascript
 module.exports = {
   content: ["./components/**/*.twig"],
   theme: {
@@ -89,7 +89,7 @@ module.exports = {
   },
   plugins: [],
 };
-`
+```
 - Add below lines to `package.json` below lines
 ```json
 "tailwind-dev": "npx tailwindcss --input src/tailwind.pcss --output dist/tailwind.css --watch",
